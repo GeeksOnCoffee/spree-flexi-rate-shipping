@@ -1,5 +1,4 @@
-class Admin::FlexiShippingRatesController < Admin::BaseController    
-    resource_controller
+class Admin::FlexiShippingRatesController < Admin::ResourceController   
     before_filter :load_data
     layout 'admin'
 

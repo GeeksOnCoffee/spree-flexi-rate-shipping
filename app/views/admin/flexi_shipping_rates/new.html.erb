@@ -1,6 +1,5 @@
 <h1><%= "#{t("actions.new")} #{FlexiShippingRate.human_name}" %></h1>
 
-<%= error_messages_for :flexi_shipping_rate %>
 
 <% form_for(:flexi_shipping_rate, :url => collection_url) do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
