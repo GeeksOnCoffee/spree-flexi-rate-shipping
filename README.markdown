@@ -1,6 +1,7 @@
 Flexi Rate Shipping
 ===================
 **Now Supports Spree: 0.8.0**
+**Now Supports Spree: 0.60.0 in a branch**
 
 Flexi Rate Shipping is an extension to Spree (a complete open source commerce solution for Ruby on Rails) that uses predefined values to calculate shipping. This extension is designed to be used when a traditional UPS / FedEx API approach in unavailable or unsuitable. 
 
@@ -83,3 +84,20 @@ Quick Start
     `rake db:migrate`
 
 3. Log in to the Admin interface and associate Products with Shipping Categories.
+
+Quick Start for 0.60.x
+============
+1. Add extension to Gemfile
+	`gem "spree_flexi_rate_shipping", :require => "spree_flexi_rate_shipping", :git => 'git://github.com/GeeksOnCoffee/spree-flexi-rate-shipping.git', :branch => '0.60.0'`
+	
+2. Copy Assets and Migrate Database
+	`rake spree_flexi_rate_shipping:install`
+    `rake db:migrate`	
+
+3. Log in to the Admin interface and associate Products with Shipping Categories.
+
+4. Set up Flexi-rate at /admin/flexi_shipping_rates/
+
+5. Create a Shipping Method with "Flexible Rate- Categories" as it's calculator.
+
+Work for 0.60 done by adhlssu07 of Geeks On Coffee and sponsored by Workman Technology Services.
