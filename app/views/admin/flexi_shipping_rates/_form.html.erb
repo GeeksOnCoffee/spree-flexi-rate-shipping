@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td><%= ShippingCategory.human_name %>:</td>
+    <td><%= ShippingCategory.model_name.human %>:</td>
     <td><%= collection_select(:flexi_shipping_rate, 
                               :shipping_category_id, @available_categories, :id, :name, 
                               {}, {"style" => "width:200px"}) %></td>
