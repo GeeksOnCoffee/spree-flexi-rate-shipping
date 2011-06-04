@@ -91,9 +91,9 @@ Quick Start for 0.60.x
 	`gem "spree_flexi_rate_shipping", :require => "spree_flexi_rate_shipping", :git => 'git://github.com/GeeksOnCoffee/spree-flexi-rate-shipping.git', :branch => '0.60.0'`
 
 2. Get Gem
-   bundle install
+    bundle install
 	
-2. Copy Assets and Migrate Database
+3. Copy Assets and Migrate Database
     `rake spree_flexi_rate_shipping:install`
     `rake db:migrate`	
 
