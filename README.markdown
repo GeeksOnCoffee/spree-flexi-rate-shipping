@@ -89,9 +89,12 @@ Quick Start for 0.60.x
 ============
 1. Add extension to Gemfile
 	`gem "spree_flexi_rate_shipping", :require => "spree_flexi_rate_shipping", :git => 'git://github.com/GeeksOnCoffee/spree-flexi-rate-shipping.git', :branch => '0.60.0'`
+
+2. Get Gem
+   bundle install
 	
 2. Copy Assets and Migrate Database
-	`rake spree_flexi_rate_shipping:install`
+    `rake spree_flexi_rate_shipping:install`
     `rake db:migrate`	
 
 3. Log in to the Admin interface and associate Products with Shipping Categories.
