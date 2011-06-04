@@ -2,14 +2,6 @@ class Admin::FlexiShippingRatesController < Admin::ResourceController
     before_filter :load_data
     layout 'admin'
 
-    update.response do |wants|
-      wants.html { redirect_to collection_url }
-    end
-
-    create.response do |wants|
-      wants.html { redirect_to collection_url }
-    end
-    
     private 
 			def collection 
 	      @collection ||= end_of_association_chain.order_by_zone_and_category 
