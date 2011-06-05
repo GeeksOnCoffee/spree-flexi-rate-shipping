@@ -75,12 +75,20 @@ The total shipping amount would be:
 
 Quick Start
 ===========
-1. Install extension:
+1. Install gem:
 
-    `script/extension install git://github.com/BDQ/spree-flexi-rate-shipping.git `
+    `gem "spree_flexi_rate_shipping", :require => "spree_flexi_rate_shipping", :git => 'git://github.com/GeeksOnCoffee/spree-flexi-rate-shipping.git', :branch => '0.60.0' `
 
-2. Migrate the database (or bootstrap if you want the sample data for testing)
+2. Migrate the database
 
     `rake db:migrate`
 
 3. Log in to the Admin interface and associate Products with Shipping Categories.
+
+4. Access Admin Site to setup Rates
+
+	'/admin/flexi_shipping_rates/'
+
+5. Setup Shipping Method
+
+	'/admin/shipping_methods'
