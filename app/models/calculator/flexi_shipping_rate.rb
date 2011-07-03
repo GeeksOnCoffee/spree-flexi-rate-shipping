@@ -25,7 +25,7 @@ class Calculator::FlexiShippingRate < Calculator
           return false if sc.nil?
           flexi_rates = sc.flexi_shipping_rates
           
-          fsr = flexi_rates.detect{ | rate | rate.zone.include?(object.ship_address) }
+          fsr = flexi_rates.detect{ | rate | rate.zone.include?(object.order.ship_address) }
         
           rate_count.has_key?(fsr.id) ? rate_count[fsr.id] += 1 : rate_count[fsr.id] = 1
 
