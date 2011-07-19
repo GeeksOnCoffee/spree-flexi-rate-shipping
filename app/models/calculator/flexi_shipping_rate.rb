@@ -24,8 +24,8 @@ class Calculator::FlexiShippingRate < Calculator
           sc = li.variant.product.shipping_category
           return false if sc.nil?
           flexi_rates = sc.flexi_shipping_rates
-          
-          fsr = flexi_rates.detect{ | rate | rate.zone.include?(object.order.ship_address) }
+           
+          fsr = flexi_rates.detect{ | rate | rate.zone.include?(ship_address = (object.class == Shipment) ? object.order.ship_address : object.ship_address) }
         
           rate_count.has_key?(fsr.id) ? rate_count[fsr.id] += 1 : rate_count[fsr.id] = 1
 
